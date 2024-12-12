@@ -5,7 +5,7 @@
 This repository is not a boilerplate. Instead, it serves as a Proof of Concept (PoC) to demonstrate how combining [SST](https://sst.dev/) and [Payload CMS](https://payloadcms.com/) can help reduce costs and create more resilient CMS-based websites. It showcases strategies that can eliminate unnecessary expenses, simplify infrastructure, and improve developer experience.
 
 > [!WARNING]  
-> This PoC is still under active development. The codebase needs cleanup, Route53 integration is pending, and certain adjustments (e.g., RichText rendering, CloudFront settings) are required. Please do not expect everything to run seamlessly if you attempt to deploy it as-is. Over the next few days and weeks, we will refine and improve this repository.
+> This PoC is still under active development. The codebase needs cleanup, Route53 integration is pending, and certain adjustments (e.g., RichText rendering, CloudFront settings) are required. Please do not expect everything to run seamlessly if you attempt to deploy it as-is. Over the next few days and weeks, I will refine and improve this repository.
 
 ---
 
@@ -19,7 +19,7 @@ Many CMS-based projects become unnecessarily expensive:
    Traditional Content as a Service (CaaS) platforms often impose expensive plans that limit the number of users, collections, and features. These constraints can push costs into the thousands of dollars.
 
 2. **Infrastructure Overhead:**  
-   In some cases, simple projects (a frontend, a few APIs, and a storage bucket) still require months of work by an infrastructure engineer, significantly inflating the budget. For example, in a previous project, we identified that several thousands of dollars could have been saved by optimizing the setup.
+   In some cases, simple projects (a frontend, a few APIs, and a storage bucket) still require months of work by an infrastructure engineer, significantly inflating the budget. For example, in a previous project, I identified that several thousands of dollars could have been saved by optimizing the setup.
 
 These costs don’t just waste money; they also limit meaningful investments in the project itself. In one instance, infrastructure and CMS expenses forced the team to opt for static site generation to avoid server-side rendering costs, resulting in poor SEO performance due to skipped features like image optimization.
 
