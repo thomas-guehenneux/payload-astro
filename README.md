@@ -4,7 +4,7 @@
 
 This repository is not a boilerplate. Instead, it serves as a Proof of Concept (PoC) to demonstrate how combining [SST](https://sst.dev/) and [Payload CMS](https://payloadcms.com/) can help reduce costs and create more resilient CMS-based websites. It showcases strategies that can eliminate unnecessary expenses, simplify infrastructure, and improve developer experience.
 
-> **⚠️ Work in Progress**  
+> [!WARNING]  
 > This PoC is still under active development. The codebase needs cleanup, Route53 integration is pending, and certain adjustments (e.g., RichText rendering, CloudFront settings) are required. Please do not expect everything to run seamlessly if you attempt to deploy it as-is. Over the next few days and weeks, we will refine and improve this repository.
 
 ---
