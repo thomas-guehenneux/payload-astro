@@ -1,0 +1,13 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import SEO, { type Props as SEOProps } from '@/components/SEO.astro';
+import { SiteTitle, SiteDescription } from '@/constants';
+
+export type Props = Partial<SEOProps>;
+const { title = SiteTitle, name = SiteTitle, description = SiteDescription, ...seo } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<SEO {title} {description} {name} {...seo} />
+
+<ClientRouter />

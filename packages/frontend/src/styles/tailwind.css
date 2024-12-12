@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+:root {
+	--header-height: 3.5rem;
+}

@@ -1,0 +1,39 @@
+---
+import config from '@payload-astro/cms/payload.config';
+import IndexLayout from '@/layouts/IndexLayout.astro';
+import { RichTextComp } from '@/components/rich-text';
+import { getPayload } from 'payload';
+import FormattedDate from '@/components/FormattedDate.astro';
+
+const payload = await getPayload({ config });
+
+const releases = await payload.find({
+	collection: 'releases',
+	limit: 3,
+	depth: 100,
+});
+---
+
+<IndexLayout>
+	<h1 class="my-24 text-5xl font-bold">Changelog</h1>
+	<hr class="border-gray-200" />
+	<ul transition:name="post">
+		{
+			releases.docs.map((release) => (
+				<div class="group flex w-full">
+					<div class="mt-12 flex-none basis-[260px]">
+						<a href={`/releases/${release.id}`} class="sticky top-[18px]">
+							<div class="mb-2 inline-block rounded-lg bg-[linear-gradient(25deg,#3a084e,#5b0e81,#bc4c9b,#df7f4f)] px-3 py-1 font-mono leading-none text-white">
+								{release.versionNumber}
+							</div>
+							<FormattedDate date={new Date(release.date)} />
+						</a>
+					</div>
+					<div class="prose prose-img:rounded-xl grow border-t border-gray-200 pb-18 group-first:border-t-0">
+						<RichTextComp data={release.contents} />
+					</div>
+				</div>
+			))
+		}
+	</ul>
+</IndexLayout>

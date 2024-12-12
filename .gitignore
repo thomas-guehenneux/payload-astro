@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+
+# sst
+.sst
+.build
+
+# next.js
+.next
+.dist
+media
+
+# astro
+.astro
+dist
+
+# opennext
+.open-next
+
+# misc
+.DS_Store
+
+# local env files
+.env*.local

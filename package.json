@@ -1,0 +1,31 @@
+{
+	"name": "payload-astro",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"postgres:start": "docker run --name db --rm -p 5432:5432 -v $(pwd)/.sst/storage/postgres:/var/lib/postgresql/data -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=local postgres:latest",
+		"postgres:stop": "docker stop db",
+		"biome:fix": "biome format --write .",
+		"build": "sst build",
+		"console": "sst console",
+		"deploy": "sst deploy",
+		"dev": "sst dev",
+		"remove": "sst remove",
+		"sso": "aws sso login --sso-session=demo",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"typescript": "^5.7.2",
+		"@biomejs/biome": "1.9.4"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"dependencies": {
+		"prettier": "^3.4.2",
+		"prettier-plugin-astro": "^0.14.1",
+		"prettier-plugin-tailwindcss": "^0.6.9",
+		"sst": "3.3.71"
+	}
+}

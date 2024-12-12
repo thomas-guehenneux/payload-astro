@@ -1,0 +1,40 @@
+{
+  "name": "@payload-astro/cms",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "exports": {
+    "./payload.config": {
+      "import": "./src/payload.config.ts",
+      "require": "./src/payload.config.cjs"
+    },
+    "./payload-types": {
+      "import": "./src/payload-types.ts",
+      "require": "./src/payload-types.cjs"
+    }
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.6.0",
+    "@payloadcms/next": "^3.6.0",
+    "@payloadcms/richtext-lexical": "^3.6.0",
+    "@payloadcms/storage-s3": "^3.6.0",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "next": "15.1.0",
+    "payload": "^3.6.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sst": "3.3.71",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^22",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2"
+  }
+}

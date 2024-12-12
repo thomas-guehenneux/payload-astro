@@ -1,0 +1,27 @@
+# Directories
+.astro
+.github
+.netlify
+.vercel
+.next
+.sst
+.open-next
+dist
+node_modules
+public
+
+# Formatted by Biome
+**/*.json
+**/*.js
+**/*.ts
+**/*.tsx
+**/*.jsx
+**/*.mjs
+**/*.cjs
+
+# Images
+**/*.gif
+**/*.jpeg
+**/*.jpg
+**/*.png
+**/*.webp

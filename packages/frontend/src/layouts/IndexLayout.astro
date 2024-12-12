@@ -1,0 +1,26 @@
+---
+import '@/styles/tailwind.css';
+import BaseHead, { type Props as HeadProps } from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+
+type Props = HeadProps;
+
+const { ...head } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead {...head} />
+	</head>
+	<body class="mx-auto max-w-5xl">
+		<div
+			class="absolute top-0 left-0 -z-1 h-full w-full overflow-hidden after:absolute after:top-[-120px] after:left-[calc(50%-360px)] after:block after:h-[240px] after:w-[720px] after:bg-radial-[50%_50%_at_50%_50%] after:from-orange-100 after:content-['']"
+		>
+		</div>
+		<Header />
+		<main class="mx-4 mt-[var(--header-height)]">
+			<slot />
+		</main>
+	</body>
+</html>
