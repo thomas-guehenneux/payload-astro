@@ -71,3 +71,12 @@ Start the development environment with:
 ```bash
 bun run dev
 ```
+
+## Todo
+
+- [ ] Rending RichText using .astro components so images in richtext can be optimized using Astro's image component.
+- [ ] Deploy and debug possible issues between Cloudfront and PayloadCMS admin.
+- [ ] Create a PoC for SSO based auth for admin panel.
+- [ ] Implement efficient caching(time-based revalidation and on-demand revalidation)
+- [ ] Implement workflow for PR preview stages
+- [ ] Implement workflow for dev/staging/production environment.
